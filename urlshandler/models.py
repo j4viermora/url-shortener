@@ -7,6 +7,7 @@ class ShortUrl(models.Model):
     url = models.URLField()
     short_url = models.CharField(max_length=10)
     created_at = models.DateTimeField(auto_now_add=True)
+    visits = models.IntegerField(default=0)
 
     def __str__(self):
         return self.short_url
